@@ -33,10 +33,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="/skills/create">Skill Create</a>
                     <a class="nav-link" href="/skills/">Skill Table</a>
-                    <a class="nav-link" href="/skills/update">Skill Update</a>
-                    <a class="nav-link" href="/skills/delete">Skill Delete</a>
+                    <a class="nav-link" href="/users/">User Table</a>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

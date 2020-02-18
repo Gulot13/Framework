@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Skill;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use Illuminate\Http\Request;
@@ -15,8 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $userSkills = User::find(Auth::id())->skills;
-        return view('users.showSkill', compact('userSkills'));
+        $users = User::all();
+        return view('users.index', compact('users'));
     }
 
 /*    public function showSkill($id){
@@ -31,7 +32,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        // On laisse au nouvel user le plaisir de s'inscrire.
     }
 
     /**
@@ -42,7 +43,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Au final pas besoin de créer un user nan?
     }
 
     /**
@@ -54,6 +55,8 @@ class UserController extends Controller
     public function show($id)
     {
         //
+        $user = User::find($id);
+        return view('users.showSkill', compact('user'));
     }
 
     /**

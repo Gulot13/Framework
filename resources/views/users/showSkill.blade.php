@@ -4,6 +4,7 @@
 
 @section('content')
 
+<h1>Skill de {{$user->firstname}} {{$user->lastname}} (email: {{ $user->email}})</h1>
 <table class="table">
     <thead>
     <tr>
@@ -14,7 +15,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($userSkills as $skill)
+    @foreach($user->skills as $skill)
     <tr>
         <td>{{$skill->id}}</td>
         <td>{{$skill->name}}</td>
